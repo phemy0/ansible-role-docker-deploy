@@ -1,39 +1,35 @@
-Role Name
-=========
+📖 Overview
 
-A brief description of the role goes here.
+This Ansible role automates the installation of Docker and Docker Compose on remote servers, authenticates with DockerHub, pulls container images, and deploys applications using Docker Compose. It supports environment variables via .env files and can automatically restart the stack when configuration changes.
 
-Requirements
-------------
+🛠️ Features
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+    Installs Docker engine and Docker Compose plugin.
 
-Role Variables
---------------
+    Logs into DockerHub using username + password or personal access token.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    Pulls container images from DockerHub or other registries.
 
-Dependencies
-------------
+    Deploys services defined in docker-compose.yml.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+    Supports .env files for environment variables.
 
-Example Playbook
-----------------
+    Includes handlers to restart the stack when configs change.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+🚀 Requirements
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+    Ansible 2.12+
 
-License
--------
+    Python 3.x
 
-BSD
+    Target hosts running Debian/Ubuntu (extendable for other distros).
 
-Author Information
-------------------
+    DockerHub account and token (recommended).
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-# ansible-role-docker-deploy
+📂 Role Variables
+
+dockerhub_username: "myuser"
+dockerhub_token: "mytoken"
+docker_image: "myorg/myapp:latest"
+app_port: "3000"
+
