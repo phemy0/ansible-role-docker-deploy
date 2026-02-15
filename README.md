@@ -28,8 +28,20 @@ This Ansible role automates the installation of Docker and Docker Compose on rem
 
 📂 Role Variables
 
-dockerhub_username: "myuser"
-dockerhub_token: "mytoken"
-docker_image: "myorg/myapp:latest"
-app_port: "3000"
+dockerhub_username: "myuser"\
+dockerhub_token: "mytoken"\
+docker_image: "myorg/myapp:latest"\
+app_port: "3000"\
+
+Create a playbook file (playbook.yaml) with the following content:---
+- hosts: all
+  become: true
+  roles:
+    - role_name   # Replace with the actual role name
+
+run command:
+ansible-playbook -i inventory.ini playbook.yaml
+
+
+
 
