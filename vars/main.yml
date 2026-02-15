@@ -1,3 +1,5 @@
 dockerhub_username: "myuser"
-dockerhub_token: "mytokenvalue"
-
+dockerhub_token: "mytoken"
+docker_image: "myorg/myapp:latest"
+app_port: "3000"
+ansible_user: "ubuntu"
