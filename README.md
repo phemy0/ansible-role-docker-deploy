@@ -35,3 +35,13 @@ dockerhub_username: "myuser"
 dockerhub_token: "mytoken"
 docker_image: "myorg/myapp:latest"
 app_port: "3000"
+# ▶️ Usage
+
+### Run the Playbook
+
+Use the following command to execute the playbook against your inventory:
+
+```bash
+ansible-playbook -i inventory.ini playbook.yaml
+
+
